@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topluluk Akisi</title>
+  <link rel="stylesheet" href="Web Site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <h1>Forum Akis</h1>
+    </div>
+    <div class="online" aria-label="cevrimici kullanicilar">
+      <span class="online-light"></span>
+      <strong>2.438</strong> kisi cevrimici
+      <button id="refresh-btn" class="action" type="button">Yenile</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="feed-wrap">
+      <section class="composer card">
+        <h2>Yeni Gonderi</h2>
+        <form id="post-form">
+          <input id="post-title" type="text" maxlength="100" placeholder="Baslik" required />
+          <textarea id="post-text" rows="3" maxlength="500" placeholder="Mesajin" required></textarea>
+          <button type="submit" class="action primary">Gonder</button>
+        </form>
+      </section>
+
+      <section id="feed" class="feed" aria-label="gonderi akis"></section>
+    </section>
+
+    <aside class="side">
+      <section class="panel card">
+        <h3>Giris Yap</h3>
+        <form id="login-form">
+          <input id="username" type="text" maxlength="24" placeholder="kullanici_adi" required />
+          <input id="password" type="password" minlength="4" maxlength="64" placeholder="sifre (en az 4 karakter)" />
+          <input id="avatar-upload" type="file" accept="image/*" />
+          <button type="submit" class="action primary">Kaydet</button>
+        </form>
+        <div class="profile-preview">
+          <img id="profile-avatar" alt="profil fotografi" />
+        </div>
+        <p id="login-status" class="status">Durum: giris yok</p>
+      </section>
+
+      <section class="panel card">
+        <h3>Kurallar</h3>
+        <ul>
+          <li>Bot/NPC icerik yok</li>
+          <li>Saygili dil zorunlu</li>
+          <li>Yorumlar acik ve gercek kullanici odakli</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <script src="Web Site.js"></script>
+</body>
+</html>
